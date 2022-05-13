@@ -1,2 +1,2 @@
 # go
-goloang
+golang
