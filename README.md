@@ -2,6 +2,7 @@
 golang
 
 ## go-api
+- golang:1.18.2
 
 - Loacl Test
 ````
