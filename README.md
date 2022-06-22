@@ -2,6 +2,13 @@
 golang
 
 ## go-api
+- golang:1.18.2
+
+#### Kernel
+```
+root@c4a2f69e1ec7:/home# uname -a
+Linux c4a2f69e1ec7 5.10.104-linuxkit #1 SMP Thu Mar 17 17:08:06 UTC 2022 x86_64 GNU/Linux
+```
 
 - Loacl Test
 ````
