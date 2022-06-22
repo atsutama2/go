@@ -1,12 +1,6 @@
-FROM golang:1.18.2
-ENV ROOT=/go/src/app
-RUN mkdir ${ROOT}
-WORKDIR ${ROOT}
+FROM golang:latest
 
-COPY go.mod go.sum ./
-COPY . .
-RUN go get
+RUN mkdir /app
+WORKDIR /app
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o $ROOT/binary
-EXPOSE 8080
-CMD ["/go/src/app/binary"]
+RUN go install github.com/gin-gonic/gin@latest

@@ -2,17 +2,14 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"log"
 )
 
 func main() {
-	log.Println("start server...")
-	r := gin.Default()
-	r.GET("/", func(context *gin.Context) {
-		context.JSON(200, gin.H{
-			"message": "Hello World!",
-		})
+	router := gin.Default()
+	router.LoadHTMLGlob("templates/*.html")
+	router.GET("/", func(context *gin.Context) {
+		context.HTML(200, "index.html", gin.H{})
 	})
 
-	log.Fatal(r.Run()) // default :8080
+	router.Run()
 }
