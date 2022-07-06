@@ -16,6 +16,13 @@ go mod tidy
 ## go-api
 - golang:1.18.2
 
+####
+- start
+```
+docker-compose up
+```
+- http://localhost:8080/
+
 #### Kernel
 ```
 root@c4a2f69e1ec7:/home# uname -a
